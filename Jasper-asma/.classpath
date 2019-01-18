@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="application/src"/>
+	<classpathentry kind="lib" path="application/lib/commons-beanutils-1.9.0.jar"/>
+	<classpathentry kind="lib" path="application/lib/commons-collections-3.2.1.jar"/>
+	<classpathentry kind="lib" path="application/lib/commons-digester-2.1.jar"/>
+	<classpathentry kind="lib" path="application/lib/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="application/lib/groovy-all-2.0.1.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="C:/Users/Amir/Downloads/Jasper-asma/application/lib/itextpdf-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Amir/Downloads/Jasper-asma/application/lib/itext-pdfa-5.5.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Amir/Downloads/jasperreports-6.0.0.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Amir/Downloads/Compressed/json-simple-1.1.jar/json-simple-1.1.jar"/>
+	<classpathentry kind="lib" path="C:/Users/Amir/Downloads/Jasper-asma/jasper-compiler-jdt.jar"/>
+	<classpathentry kind="output" path="application/bin"/>
+</classpath>
