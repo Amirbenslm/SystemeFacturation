@@ -92,6 +92,7 @@ public class A {
 	private JTextField jt_NumFact;
 	private final Action action = new SwingAction();
 	protected boolean etatFactureNouveau=true;
+	 int numthread=0;
 	/**
 	 * Launch the application.
 	 */
@@ -123,6 +124,7 @@ public class A {
 		frmSystmeDeFacturation.setIconImage(Toolkit.getDefaultToolkit().getImage("SystemeFacturation/configuration/a.jpg"));
 		DateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy ");
 		Date date = new Date();
+		numthread=1;
 		frmSystmeDeFacturation.setTitle("Syst\u00E9me de Facturation ");
 		frmSystmeDeFacturation.setBounds(100, 10, 1112, 714);
 		frmSystmeDeFacturation.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -338,7 +340,7 @@ public class A {
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new TitledBorder(null, "Client", TitledBorder.LEADING, TitledBorder.TOP, null, null));
-		panel_1.setBounds(550, 25, 509, 231);
+		panel_1.setBounds(550, 25, 509, 275);
 		frmSystmeDeFacturation.getContentPane().add(panel_1);
 		panel_1.setLayout(null);
 		
@@ -416,6 +418,14 @@ public class A {
 		panel_1.add(jt_NumFact);
 		jt_NumFact.setColumns(10);
 		
+		JComboBox comboBox = new JComboBox();
+		comboBox.setBounds(137, 232, 324, 32);
+		panel_1.add(comboBox);
+		
+		JLabel lblClient = new JLabel("Client :");
+		lblClient.setBounds(10, 237, 95, 23);
+		panel_1.add(lblClient);
+		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Article", TitledBorder.RIGHT, TitledBorder.TOP, null, new Color(0, 0, 0)));
 		panel_2.setBounds(10, 25, 514, 379);
@@ -423,47 +433,47 @@ public class A {
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_3.setBounds(550, 267, 509, 137);
+		panel_3.setBounds(550, 306, 509, 98);
 		frmSystmeDeFacturation.getContentPane().add(panel_3);
 		panel_3.setLayout(null);
 		
 		JLabel lblNewLabel_1 = new JLabel("FODEC :");
-		lblNewLabel_1.setBounds(10, 32, 80, 26);
+		lblNewLabel_1.setBounds(10, 11, 80, 26);
 		panel_3.add(lblNewLabel_1);
 		
 		jtFodec = new JTextField("0");
 		jtFodec.setEditable(false);
-		jtFodec.setBounds(75, 32, 139, 26);
+		jtFodec.setBounds(77, 11, 139, 26);
 		panel_3.add(jtFodec);
 		jtFodec.setColumns(10);
 		
 		JLabel lblTva = new JLabel("TVA :");
-		lblTva.setBounds(10, 87, 72, 26);
+		lblTva.setBounds(10, 61, 62, 26);
 		panel_3.add(lblTva);
 		
 		jtTVA = new JTextField("0");
 		jtTVA.setEditable(false);
-		jtTVA.setBounds(75, 87, 141, 26);
+		jtTVA.setBounds(75, 61, 141, 26);
 		panel_3.add(jtTVA);
 		jtTVA.setColumns(10);
 		
 		JLabel lblTotalNetHt = new JLabel("Total NET HT :");
-		lblTotalNetHt.setBounds(236, 32, 80, 26);
+		lblTotalNetHt.setBounds(236, 11, 80, 26);
 		panel_3.add(lblTotalNetHt);
 		
 		jtTotalNetHT = new JTextField("0");
 		jtTotalNetHT.setEditable(false);
-		jtTotalNetHT.setBounds(326, 32, 139, 26);
+		jtTotalNetHT.setBounds(326, 11, 139, 26);
 		panel_3.add(jtTotalNetHT);
 		jtTotalNetHT.setColumns(10);
 		
 		JLabel lblNetAPayer = new JLabel("NET a Payer :");
-		lblNetAPayer.setBounds(236, 87, 80, 26);
+		lblNetAPayer.setBounds(236, 61, 80, 26);
 		panel_3.add(lblNetAPayer);
 		
 		jtNetaPayer = new JTextField("0");
 		jtNetaPayer.setEditable(false);
-		jtNetaPayer.setBounds(326, 87, 139, 26);
+		jtNetaPayer.setBounds(326, 61, 139, 26);
 		panel_3.add(jtNetaPayer);
 		jtNetaPayer.setColumns(10);
 		
@@ -600,4 +610,5 @@ public class A {
 		public void actionPerformed(ActionEvent e) {
 		}
 	}
+	
 }
