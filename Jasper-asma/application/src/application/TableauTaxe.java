@@ -6,6 +6,7 @@ private double base;
 private String taux;
 private double montant;
 
+
 public TableauTaxe() {
 	
 }

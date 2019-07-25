@@ -114,7 +114,7 @@ public class TaxFrame extends JFrame {
 					String dirName = "C:\\SystemeFacturation\\configuration\\";
 							 File dir = new File(dirName);
 							 boolean isCreated = dir.mkdirs();
-					FileWriter fw = new FileWriter (dirName+"Tax.txt");
+					FileWriter fw = new FileWriter ("SystemeFacturation/configuration/Tax.txt");
 					BufferedWriter bw = new BufferedWriter (fw);
 					PrintWriter fichierSortie = new PrintWriter (bw); 
 						fichierSortie.println(fodec);

@@ -147,9 +147,9 @@ public class A {
 		mnNewMenu.add(mntmTax);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(16, 41, 187, 304);
+		panel.setBounds(16, 41, 187, 329);
 		frmSystmeDeFacturation.getContentPane().add(panel);
-		panel.setLayout(new GridLayout(7,1,0,0));
+		panel.setLayout(new GridLayout(8,1,0,0));
 		
 		JLabel lblDsignationArticle = new JLabel("D\u00E9signation Article :");
 		panel.add(lblDsignationArticle);
@@ -172,29 +172,32 @@ public class A {
 		JLabel lblHauteur = new JLabel("Hauteur :");
 		panel.add(lblHauteur);
 		
+		JLabel lblArticle = new JLabel("Article :");
+		panel.add(lblArticle);
+		
 		tfDesignation = new JTextField();
-		tfDesignation.setBounds(207, 47, 304, 33);
+		tfDesignation.setBounds(207, 42, 304, 33);
 		frmSystmeDeFacturation.getContentPane().add(tfDesignation);
 		tfDesignation.setColumns(10);
 		
 		tflonguer = new JTextField();
-		tflonguer.setBounds(207, 91, 304, 33);
+		tflonguer.setBounds(207, 84, 304, 33);
 		frmSystmeDeFacturation.getContentPane().add(tflonguer);
 		tflonguer.setColumns(10);
 		
 		tflargeur = new JTextField();
-		tflargeur.setBounds(207, 135, 304, 33);
+		tflargeur.setBounds(207, 127, 304, 33);
 		frmSystmeDeFacturation.getContentPane().add(tflargeur);
 		tflargeur.setColumns(10);
 		
 		tfQuantite = new JTextField();
 		tfQuantite.setText("1");
-		tfQuantite.setBounds(207, 179, 304, 33);
+		tfQuantite.setBounds(207, 169, 304, 33);
 		frmSystmeDeFacturation.getContentPane().add(tfQuantite);
 		tfQuantite.setColumns(10);
 		
 		tfprix1metre = new JTextField();
-		tfprix1metre.setBounds(207, 223, 304, 33);
+		tfprix1metre.setBounds(207, 211, 304, 33);
 		frmSystmeDeFacturation.getContentPane().add(tfprix1metre);
 		tfprix1metre.setColumns(10);
 		
@@ -208,15 +211,10 @@ public class A {
 				{tfHauteur.setEditable(false);}
 			}
 		});
-		cb_formule.setBounds(207, 267, 304, 33);
+		cb_formule.setBounds(207, 255, 304, 33);
 		frmSystmeDeFacturation.getContentPane().add(cb_formule);
 		cb_formule.setModel(new DefaultComboBoxModel(new String[] {"Lin\u00E9aire", "M\u00E9tre carr\u00E9", "M\u00E9tre cube", "Pi\u00E8ce"}));
 		mytablemodel=new ArticleModel();
-		table = new JTable();
-		table.setModel(mytablemodel);
-		JScrollPane scrollPane = new JScrollPane(table);
-		scrollPane.setBounds(10, 415, 1049, 208);
-		frmSystmeDeFacturation.getContentPane().add(scrollPane);
 		
 		JButton btnAjouter = new JButton("Ajouter");
 		btnAjouter.setBackground(SystemColor.controlHighlight);
@@ -297,12 +295,12 @@ public class A {
 					{JOptionPane.showMessageDialog(null,"La Facture est saturée vous avez déja 11 article ","Erreur",JOptionPane.ERROR_MESSAGE);}
 			
 		}});
-		btnAjouter.setBounds(74, 358, 95, 27);
+		btnAjouter.setBounds(74, 385, 95, 27);
 		frmSystmeDeFacturation.getContentPane().add(btnAjouter);
 		
 		tfHauteur = new JTextField();
 		tfHauteur.setEditable(false);
-		tfHauteur.setBounds(208, 311, 303, 31);
+		tfHauteur.setBounds(207, 298, 303, 31);
 		frmSystmeDeFacturation.getContentPane().add(tfHauteur);
 		tfHauteur.setColumns(10);
 		
@@ -334,9 +332,19 @@ public class A {
 				{JOptionPane.showMessageDialog(null,"Il faut selectionner une ligne!","Erreur",JOptionPane.ERROR_MESSAGE);}
 			}
 		});
-		btnSupprimer.setBounds(232, 358, 95, 27);
+		
+		JComboBox cb_Article = new JComboBox();
+		cb_Article.setBackground(Color.LIGHT_GRAY);
+		cb_Article.setBounds(207, 336, 304, 33);
+		frmSystmeDeFacturation.getContentPane().add(cb_Article);
+		btnSupprimer.setBounds(232, 385, 95, 27);
 		btnSupprimer.setBackground(SystemColor.controlHighlight);
 		frmSystmeDeFacturation.getContentPane().add(btnSupprimer);
+		table = new JTable();
+		table.setModel(mytablemodel);
+		JScrollPane scrollPane = new JScrollPane(table);
+		scrollPane.setBounds(10, 430, 1049, 208);
+		frmSystmeDeFacturation.getContentPane().add(scrollPane);
 		
 		JPanel panel_1 = new JPanel();
 		panel_1.setBorder(new TitledBorder(null, "Client", TitledBorder.LEADING, TitledBorder.TOP, null, null));
@@ -419,6 +427,7 @@ public class A {
 		jt_NumFact.setColumns(10);
 		
 		JComboBox comboBox = new JComboBox();
+		comboBox.setBackground(Color.LIGHT_GRAY);
 		comboBox.setBounds(137, 232, 324, 32);
 		panel_1.add(comboBox);
 		
@@ -428,12 +437,12 @@ public class A {
 		
 		JPanel panel_2 = new JPanel();
 		panel_2.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "Article", TitledBorder.RIGHT, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_2.setBounds(10, 25, 514, 379);
+		panel_2.setBounds(10, 25, 514, 394);
 		frmSystmeDeFacturation.getContentPane().add(panel_2);
 		
 		JPanel panel_3 = new JPanel();
 		panel_3.setBorder(new TitledBorder(UIManager.getBorder("TitledBorder.border"), "", TitledBorder.LEADING, TitledBorder.TOP, null, new Color(0, 0, 0)));
-		panel_3.setBounds(550, 306, 509, 98);
+		panel_3.setBounds(550, 306, 509, 113);
 		frmSystmeDeFacturation.getContentPane().add(panel_3);
 		panel_3.setLayout(null);
 		
@@ -514,16 +523,24 @@ public class A {
 				            TableauTaxe taxe1=new TableauTaxe();
 				            taxe1.setLibele_taxe("FODEC ");
 				            taxe1.setBase(Double.parseDouble(jtTotalNetHT.getText()));
-				            taxe1.setTaux("1%");
+				            taxe1.setTaux(fodec+"%");
 				            taxe1.setMontant(Double.parseDouble(jtFodec.getText()));
 				            listeTaxes.add(taxe1);
 				            TableauTaxe taxe2=new TableauTaxe();
 				            taxe2.setLibele_taxe("TVA ");
 				            double aux=taxe1.getBase()+taxe1.getMontant();
 				            taxe2.setBase(((double)((int)(aux*1000))/1000));
-				            taxe2.setTaux("19%");
+				            taxe2.setTaux(tva+"%");
 				            taxe2.setMontant(Double.parseDouble(jtTVA.getText()));
+				            TableauTaxe taxetimbre= new TableauTaxe();
+				            taxetimbre.setLibele_taxe("Timbre");
+				            //double aux=taxe1.getBase()+taxe1.getMontant();
+				            taxetimbre.setBase(0.0);
+				            taxetimbre.setTaux("-");
+				            taxetimbre.setMontant(timbre);
+				            
 				            listeTaxes.add(taxe2);
+				            listeTaxes.add(taxetimbre);
 				            
 				            new JasperClass(mytablemodel.data,cb_Document.getSelectedItem().toString(),parameters,listeTaxes,etatFactureNouveau);
 						FileWriter file = new FileWriter("SystemeFacturation/configuration/factures.json");
@@ -546,7 +563,7 @@ public class A {
 			}
 		});
 		btnFacturer.setBackground(SystemColor.controlHighlight);
-		btnFacturer.setBounds(721, 641, 127, 33);
+		btnFacturer.setBounds(721, 644, 127, 33);
 		frmSystmeDeFacturation.getContentPane().add(btnFacturer);
 		
 		JButton btnNouveau = new JButton("Nouvelle Facture");
@@ -573,7 +590,7 @@ public class A {
 			}
 		});
 		btnNouveau.setBackground(SystemColor.controlHighlight);
-		btnNouveau.setBounds(898, 641, 138, 33);
+		btnNouveau.setBounds(898, 644, 138, 33);
 		frmSystmeDeFacturation.getContentPane().add(btnNouveau);
 		frmSystmeDeFacturation.setResizable(false);
 		
@@ -610,5 +627,4 @@ public class A {
 		public void actionPerformed(ActionEvent e) {
 		}
 	}
-	
 }

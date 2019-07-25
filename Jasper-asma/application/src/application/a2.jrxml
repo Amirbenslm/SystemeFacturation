@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.4.0.final using JasperReports Library version 6.4.1  -->
+<!-- Created with Jaspersoft Studio version 6.9.0.final using JasperReports Library version 6.9.0-cb8f9004be492ccc537180b49c026951f4220bf3  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Blank_A4" pageWidth="595" pageHeight="842" whenNoDataType="AllSectionsNoDetail" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" whenResourceMissingType="Empty" isIgnorePagination="true" uuid="fb4d0b3d-dcf2-43b3-a12b-6465bb02384c">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
 	<style name="Table_TH" mode="Opaque" backcolor="#FFFFFF">
@@ -90,14 +90,15 @@
 		<band splitType="Stretch"/>
 	</background>
 	<title>
-		<band height="109" splitType="Stretch">
+		<band height="119" splitType="Stretch">
 			<staticText>
-				<reportElement x="0" y="44" width="260" height="54" uuid="1355b596-16f2-42d0-bca3-6d6f9372170a"/>
+				<reportElement x="0" y="40" width="260" height="54" uuid="1355b596-16f2-42d0-bca3-6d6f9372170a"/>
 				<textElement>
 					<font size="12"/>
 				</textElement>
 				<text><![CDATA[Rue Andalous-Dar Chaabane El-Fehry
 Code TVA : 1139620TPC000
+RIB :11 021 0001133 002788 80
 ]]></text>
 			</staticText>
 			<frame borderSplitType="DrawBorders">
